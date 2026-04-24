@@ -25,3 +25,7 @@ test_script:
     bin\mintty.exe --log mintty.log --exec echo hello mintty
     grep hello mintty.log
     bin\mintty.exe --log - --exec echo hello stdout | grep hello
+
+- path: bin
+  name: app
+  type: zip
