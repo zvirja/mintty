@@ -26,6 +26,11 @@ test_script:
     grep hello mintty.log
     bin\mintty.exe --log - --exec echo hello stdout | grep hello
 
+build_script:
+- cmd: |
+    dir  C:\cygwin64\bin
+    
+artifacts:
 - path: C:\cygwin64\bin
   name: app
   type: zip
