@@ -20,7 +20,7 @@ build_script:
     set PATH=C:\cygwin64\bin;%PATH%
     make
 - cmd: |
-    dir .
+    xcopy C:\cygwin64\bin out /s /e
 
 test_script:
 - cmd: |
@@ -29,6 +29,6 @@ test_script:
     bin\mintty.exe --log - --exec echo hello stdout | grep hello
     
 artifacts:
-- path: bin
+- path: out
   name: app
   type: zip
