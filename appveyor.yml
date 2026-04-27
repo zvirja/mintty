@@ -20,7 +20,7 @@ build_script:
     set PATH=C:\cygwin64\bin;%PATH%
     make
 - cmd: |
-    xcopy C:\cygwin64\bin out /s /e
+    xcopy C:\cygwin64\bin out\ /s /e
 
 test_script:
 - cmd: |
