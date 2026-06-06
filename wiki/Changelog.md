@@ -3,13 +3,22 @@ Terminal features
   * Suppress ReGIS delay command on graphics refresh.
   * Ensure refresh of blinking graphics (broken since 3.7.9).
   * Fix emoji sequence rendering in context of font or changing attributes.
+  * Fix glitch of incomplete emoji joiner at end of line.
+  * DECRQM requests for UTF-8, ambiguous-wide and emoji width modes (xterm 407).
 
 Character rendering
   * Font substitution mechanism checks glyph coverage and selects suitable alternative font (#1352).
+  * Narrow single-cell-rendered emoji graphics.
+  * Narrow certain single-cell-rendered emoji text presentations from Miscellaneous ranges.
+  * In emoji width mode, apply VS15 modifier to narrow character.
+  * Do not display VS15/VS16 modifiers, or Fitzpatrick in emoji width mode.
+  * Emoji width mode can be preconfigured as default.
 
 Keyboard handling
   * After IME option switch, reset Control state to avoid input misinterpretation (#1353).
   * User-defined key assignments (setting KeyFunctions) stay in effect in shortcut override mode (~#1351).
+  * Restrict VT220 application keypad sequences to VT220 mode by default (#1357).
+  * Support previous special VT220-style keypad sequences if Escape key mode enabled (~#1357).
 
 Window handling
   * Drag-and-drop onto terminal or Options sets window focus (#1354).
@@ -25,6 +34,8 @@ Configuration
   * New option DropFocus (#1354).
   * New option FontSubst (#1352).
   * New option CursorSize (#1360).
+  * New option OldAppKeypad (#1357).
+  * New option EmojiWidth.
 
 ### 3.8.2 (15 February 2026) ###
 

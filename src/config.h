@@ -129,6 +129,7 @@ typedef struct {
   int manage_leds;
   bool enable_remap_ctrls;
   bool old_keyfuncs_keypad;
+  bool old_app_keypad;
   // Mouse
   bool clicks_place_cursor;
   char middle_click_action;
@@ -228,6 +229,7 @@ typedef struct {
   int char_narrowing;
   char emojis;
   char emoji_placement;
+  bool emoji_width;
   wstring save_filename;
   wstring app_id;
   wstring app_name;

@@ -140,6 +140,7 @@ const config default_cfg = {
   .manage_leds = 7,
   .enable_remap_ctrls = false,
   .old_keyfuncs_keypad = false,
+  .old_app_keypad = false,
   // Mouse
   .clicks_place_cursor = false,
   .middle_click_action = MC_PASTE,
@@ -238,6 +239,7 @@ const config default_cfg = {
   .char_narrowing = 75,
   .emojis = EMOJIS_NOTO,
   .emoji_placement = EMPL_STRETCH,
+  .emoji_width = false,
   .save_filename = W("mintty.%Y-%m-%d_%H-%M-%S"),
   .app_id = W(""),
   .app_name = W(""),
@@ -480,6 +482,7 @@ options[] = {
   {"ManageLEDs", OPT_INT, offcfg(manage_leds)},
   {"ShootFoot", OPT_BOOL, offcfg(enable_remap_ctrls)},
   {"OldKeyFunctionsKeypad", OPT_BOOL, offcfg(old_keyfuncs_keypad)},
+  {"OldAppKeypad", OPT_BOOL, offcfg(old_app_keypad)},
 
   // Mouse
   {"ClicksPlaceCursor", OPT_BOOL, offcfg(clicks_place_cursor)},
@@ -592,6 +595,7 @@ options[] = {
   {"CharNarrowing", OPT_INT, offcfg(char_narrowing)},
   {"Emojis", OPT_EMOJIS, offcfg(emojis)},
   {"EmojiPlacement", OPT_EMOJI_PLACEMENT, offcfg(emoji_placement)},
+  {"EmojiWidth", OPT_BOOL, offcfg(emoji_width)},
   {"SaveFilename", OPT_WSTRING, offcfg(save_filename)},
   {"AppID", OPT_WSTRING, offcfg(app_id)},
   {"AppName", OPT_WSTRING, offcfg(app_name)},
